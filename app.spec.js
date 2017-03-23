@@ -19,7 +19,7 @@ describe('Todo', function () {
         });
 
         it('should have add function ', function (){
-            expect(angular.isFunction($ctrl.addtt)).toBe(true);
+            expect(angular.isFunction($ctrl.add)).toBe(true);
         });
 
         xit('should add a todo', function () {
