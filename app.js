@@ -1,12 +1,19 @@
 (function (angular){
     'use strict';
 
-    function todoCtrl (){
+    todoCtrl.$injector = ['todoService']
+    function todoCtrl (todoService){
 
         var $ctrl = this;
-        $ctrl.list = [];
+        
+        $ctrl.$onInit = function () {
+            $ctrl.add = function () {}
+            todoService.get().then(function (data){
+                $ctrl.list = data;
+            });
+            $ctrl.list = [];
+        }
 
-        $ctrl.add = []
     }
 
     angular.module('todoApp', [])
