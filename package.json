@@ -1,13 +1,14 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just testing...",
   "main": "index.js",
   "scripts": {
     "karma": "karma",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "mutate": "node_modules/.bin/stryker run"
   },
-  "author": "",
+  "author": "Mattia Peterson",
   "license": "ISC",
   "devDependencies": {
     "angular-mocks": "^1.6.3",
@@ -15,6 +16,14 @@
     "karma": "^1.5.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
-    "karma-spec-reporter": "0.0.30"
+    "karma-spec-reporter": "0.0.30",
+    "stryker": "^0.5.9",
+    "stryker-api": "^0.4.2",
+    "stryker-html-reporter": "^0.3.0",
+    "stryker-jasmine": "^0.1.0",
+    "stryker-karma-runner": "^0.3.5"
+  },
+  "dependencies": {
+    "angular": "^1.6.3"
   }
 }
