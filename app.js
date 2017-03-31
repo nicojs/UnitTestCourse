@@ -7,7 +7,17 @@
         var $ctrl = this;
 
         $ctrl.$onInit = function () {
-            $ctrl.add = function () {}
+            $ctrl.add = function (a, b) {
+              var result = a + b;
+              return result;
+            };
+
+            $ctrl.logic = function (a, b) {
+              var value1 = true, value2 = true;
+              var result = value1 && value2;
+              return result;
+            };
+
             todoService.get().then(function (data){
                 $ctrl.list = data;
             });

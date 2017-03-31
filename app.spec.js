@@ -31,13 +31,20 @@ describe('Todo', function () {
             expect(angular.isFunction($ctrl.add)).toBe(true);
         });
 
-        xit('should add a todo', function () {
-            $ctrl.add('TalkTalk');
-            expect($ctrl.list.length).toBe(1);
-        });
-
         it('should have onInit function with add method', function () {
             expect($ctrl.add).toBeDefined();
+        });
+
+        it('should have add method that adds two numbers', function () {
+            expect($ctrl.add(1, 2)).toEqual(3);
+        });
+
+        it('should have logic method', function () {
+            expect($ctrl.logic).toBeDefined();
+        });
+
+        it('should return true', function () {
+            expect($ctrl.logic()).toEqual(true);
         });
 
         it('should have a service', function () {
