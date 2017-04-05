@@ -12,16 +12,15 @@
               return result;
             };
 
-            $ctrl.logic = function (a, b) {
-              var value1 = true, value2 = true;
-              var result = value1 && value2;
+            $ctrl.and = function (a, b) {
+              var result = a && b;
               return result;
             };
 
-            todoService.get().then(function (data){
-                $ctrl.list = data;
-            });
-            $ctrl.list = [];
+            $ctrl.or = function (a, b) {
+              var result = a || b;
+              return result;
+            };
         }
 
     }
